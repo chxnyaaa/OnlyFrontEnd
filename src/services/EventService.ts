@@ -2,7 +2,7 @@ import axios, { type AxiosResponse } from 'axios'
 import type { Event } from '@/type'
 
 const apiClient = axios.create({
-  baseURL: 'https://my-json-server.typicode.com/DeformiaR/lab2-14',
+  baseURL: 'https://my-json-server.typicode.com/chxnyaaa/db.json/',
   withCredentials: false,
   headers: {
     Accept: 'application/json',
@@ -12,10 +12,10 @@ const apiClient = axios.create({
 
 export default {
   getEvents(perPage: Number, page: Number): Promise<AxiosResponse<Event[]>> {
-    return apiClient.get<Event[]>(`/events?_limit=${perPage}&_page=${page}`)
+    return apiClient.get<Event[]>(`/country?_limit=${perPage}&_page=${page}`)
   },
 
   getEventById(id: Number): Promise<AxiosResponse<Event>> {
-    return apiClient.get<Event>(`/events/${id}`)
+    return apiClient.get<Event>(`/country/${id}`)
   }
 }
