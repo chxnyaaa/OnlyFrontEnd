@@ -22,5 +22,10 @@ const register = () => {
 </script>
 
 <template>
-  <button @click="register">Register</button>
+  <!-- <button @click="register">Register</button> -->
+  <div v-if="event">
+    <br>
+    <p>{{ event.sports }}</p>
+
+  </div>
 </template>
