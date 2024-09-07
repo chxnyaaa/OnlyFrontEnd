@@ -10,12 +10,12 @@ const { event } = storeToRefs(store)
 
 <template>
   <div v-if="event">
-    <h1>{{ event.title }}</h1>
+    <h1>{{ event.name }}</h1>
 
     <div id="nav">
       <RouterLink :to="{ name: 'event-detail-view' }">Details</RouterLink> |
-      <RouterLink :to="{ name: 'event-register-view' }">Register</RouterLink> |
-      <RouterLink :to="{ name: 'event-edit-view' }">Edit</RouterLink>
+      <RouterLink :to="{ name: 'event-register-view' }">Sports</RouterLink> |
+      <RouterLink :to="{ name: 'event-edit-view' }">Comment</RouterLink>
     </div>
 
     <RouterView :event="event"></RouterView>

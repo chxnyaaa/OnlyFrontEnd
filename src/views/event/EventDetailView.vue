@@ -2,6 +2,7 @@
 import type { Event } from '@/type'
 import type { PropType } from 'vue'
 import 'nprogress/nprogress.css'
+//  import { count } from 'console';
 
 defineProps({
   event: {
@@ -13,7 +14,9 @@ defineProps({
 
 <template>
   <div v-if="event">
-    <p>{{ event.time }} on {{ event.date }} @ {{ event.location }}</p>
+    <br>
+    <p>{{ event.flag }}</p>
+    <p>{{ event.name }}</p><br>
     <p>{{ event.description }}</p>
   </div>
 </template>

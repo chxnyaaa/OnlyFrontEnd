@@ -1,5 +1,8 @@
 export interface Event {
+  name: string
+  flag: string
   id: number
+  sports: any
   category: string
   title: string
   description: string

@@ -6,7 +6,7 @@ import EventService from '@/services/EventService'
 import type { AxiosResponse } from 'axios'
 import 'nprogress/nprogress.css'
 
-const events = ref<Event[]>([])
+const country = ref<Event[]>([])
 const totalEvent = ref<number>(0)
 const props = defineProps({
   page: {
@@ -22,7 +22,7 @@ onMounted(() => {
   watchEffect(() => {
     EventService.getEvents(props.eventsPerPage, props.page).then(
       (response: AxiosResponse<Event[]>) => {
-        events.value = response.data
+        country.value = response.data
         totalEvent.value = parseInt(response.headers['x-total-count'])
       }
     )
@@ -30,16 +30,16 @@ onMounted(() => {
 })
 const hasNextPage = computed(() => {
   const totalPages = Math.ceil(totalEvent.value / props.eventsPerPage)
-  return props.page < totalPages && events.value.length > 0
+  return props.page < totalPages && country.value.length > 0
 })
 </script>
 
 <template>
-  <h1>Event for good</h1>
+  <h1>Olympics Reported</h1>
   <!--new element-->
   <div class="flex flex-col items-center">
-    <EventCard v-for="event in events" :key="event.id" :event="event"></EventCard>
-    <EventInfo v-for="event in events" :key="event.id" :event="event"></EventInfo>
+    <EventCard v-for="event in country" :key="event.id" :event="event"></EventCard>
+    <EventInfo v-for="event in country" :key="event.id" :event="event"></EventInfo>
     <div class="flex w-[290px] justify-between mt-4">
       <RouterLink
         :to="{ name: 'event-list-view', query: { page: page - 1 } }"
