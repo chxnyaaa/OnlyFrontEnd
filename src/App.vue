@@ -3,7 +3,7 @@ import { RouterLink, RouterView } from 'vue-router'
 import { useMessageStore } from './stores/message'
 import { storeToRefs } from 'pinia'
 // import 'nprogress/nprogress.css';
-import { SpeedInsights } from "@vercel/speed-insights/vue"
+import { SpeedInsights } from '@vercel/speed-insights/vue'
 
 const store = useMessageStore()
 const { message } = storeToRefs(store)
@@ -27,19 +27,19 @@ const { message } = storeToRefs(store)
             :to="{ name: 'event-list-view' }"
             >Home</RouterLink
           >
-          <!-- |
+           |
           <RouterLink
             class="font-bold text-gray-700"
             exact-active-class="text-green-500"
             :to="{ name: 'about' }"
-            >About</RouterLink
+            >Register</RouterLink
           >
           |
-          <RouterLink class="font-bold text-gray-700" :to="{ name: 'student' }">student</RouterLink> -->
+          <RouterLink class="font-bold text-gray-700" exact-active-class="text-green-500" :to="{ name: 'login' }">Login</RouterLink> 
         </nav>
       </div>
     </header>
-  <RouterView />
+    <RouterView />
   </div>
 </template>
 
