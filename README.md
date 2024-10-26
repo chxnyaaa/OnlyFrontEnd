@@ -10,12 +10,6 @@
 
 
 ```sh
-652115026 Poorimprath Somkham
-```
-
-
-
-```sh
 652115038 Pawat Mungmuang
 ```
 
