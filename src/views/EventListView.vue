@@ -78,7 +78,7 @@ const hasNextPage = computed(() => {
 
 .event-title {
   font-size: 2em;
-  color: #3ca563; /* Main color for the title */
+  color: #3ca563; 
   font-weight: bold;
   margin-bottom: 20px;
 }
@@ -87,7 +87,7 @@ const hasNextPage = computed(() => {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 20px; /* Spacing between cards */
+  gap: 20px; 
   width: 100%;
   max-width: 800px;
 }
