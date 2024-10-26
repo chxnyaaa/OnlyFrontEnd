@@ -17,7 +17,9 @@ defineProps<{
       class="cursor-pointer border border-gray-600 p-[20px] w-[250px] mb-[18px] hover:scale-[1.01] hover:shadow-sp"
     >
       <h2>{{ event?.name }}</h2>
-      <span>{{ event?.flag }}</span>
+      <span>
+        <img :src="event.flag" alt="">
+      </span>
     </div>
   </RouterLink>
 </template>

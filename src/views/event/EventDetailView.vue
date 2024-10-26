@@ -13,9 +13,10 @@ defineProps({
 </script>
 
 <template>
-  <div v-if="event">
+  <div v-if="event" class="flex flex-col justify-center items-center">
     <br>
-    <p>{{ event.flag }}</p>
+    <!-- Next time use Image tag!! -->
+    <img :src="event.flag" alt="">
     <p>{{ event.name }}</p><br>
     <p>{{ event.description }}</p>
   </div>
