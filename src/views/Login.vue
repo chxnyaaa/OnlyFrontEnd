@@ -87,6 +87,7 @@
   
   h2 {
     color: #333;
+    font-weight: bold;
     margin-bottom: 1em; 
   }
   
@@ -98,6 +99,7 @@
   label {
     display: block;
     font-size: 0.9em;
+    font-weight: bold;
     color: #555;
     margin-bottom: 0.3em;
   }
@@ -115,7 +117,7 @@
   
   input[type="text"]:focus,
   input[type="password"]:focus {
-    border-color: #22C55E;
+    border-color: #3ca563;
   }
   
   button {
@@ -123,7 +125,7 @@
     padding: 0.75em;
     font-size: 1em;
     color: white;
-    background-color: #22C55E;
+    background-color: #3ca563;
     border: none;
     border-radius: 4px;
     cursor: pointer;
@@ -141,7 +143,7 @@
   }
   
   p.success {
-    color: #22C55E;
+    color: #3ca563;
     margin-top: 1em;
   }
   </style>
