@@ -86,7 +86,7 @@ const totalMedals = computed(() => {
 }
 
 .styled-table tbody tr:hover {
-  background-color: rgba(34, 197, 94, 0.2);
+  background-color: rgba(175, 215, 190, 0.2);
 }
 
 .styled-table tfoot {
