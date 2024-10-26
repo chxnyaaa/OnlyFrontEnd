@@ -35,32 +35,83 @@ const hasNextPage = computed(() => {
 </script>
 
 <template>
-  <h1>Olympics Reported</h1>
-  <!--new element-->
-  <div class="flex flex-col items-center">
-    <EventCard v-for="event in country" :key="event.id" :event="event"></EventCard>
-    <EventInfo v-for="event in country" :key="event.id" :event="event"></EventInfo>
-    <div class="flex w-[290px] justify-between mt-4">
+  <div class="event-list-container">
+    <h1 class="event-title">Olympics Reported</h1>
+    <div class="event-cards-container">
+      <EventCard v-for="event in country" :key="event.id" :event="event" />
+    </div>
+    <div class="pagination-controls">
       <RouterLink
         :to="{ name: 'event-list-view', query: { page: page - 1 } }"
         rel="prev"
         v-if="page != 1"
-        class="text-left text-gray-700 no-underline"
+        class="pagination-button"
         id="page-prev"
       >
-        Prev Page</RouterLink
-      >
+        Prev Page
+      </RouterLink>
       <RouterLink
         :to="{ name: 'event-list-view', query: { page: page + 1 } }"
         rel="next"
         v-if="hasNextPage"
-        class="text-right text-gray-700 no-underline"
+        class="pagination-button"
         id="page-next"
       >
-        Next Page</RouterLink
-      >
+        Next Page
+      </RouterLink>
     </div>
   </div>
 </template>
 
-<style scoped></style>
+<style scoped>
+.event-list-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #f9f9f9; 
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin: 20px auto; 
+  width: 600px;
+}
+
+.event-title {
+  font-size: 2em;
+  color: #3ca563; /* Main color for the title */
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.event-cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px; /* Spacing between cards */
+  width: 100%;
+  max-width: 800px;
+}
+
+.pagination-controls {
+  display: flex;
+  justify-content: space-between;
+  width: 250px;
+  margin-top: 20px;
+}
+
+.pagination-button {
+  font-size: 1em;
+  color: #3ca563;
+  text-decoration: none;
+  padding: 8px 16px;
+  border: 2px solid #3ca563;
+  border-radius: 8px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.pagination-button:hover {
+  background-color: #3ca563;
+  color: white;
+}
+</style>
+
