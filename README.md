@@ -1,5 +1,5 @@
 # COMPO-BASED SOFTWARE DEV Project
-## WW Group
+## Olympic Nuh Uh Group
 
 ### Project Member
 
