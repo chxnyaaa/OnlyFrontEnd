@@ -14,7 +14,7 @@ defineProps<{
     :to="{ name: 'event-detail-view', params: { id: event?.id } }"
   >
     <div
-      class="cursor-pointer border border-gray-600 p-[20px] w-[250px] mb-[18px] hover:scale-[1.01] hover:shadow-sp"
+      class="cursor-pointer border border-gray-600 p-[20px] w-[250px] mb-[18px] hover:scale-[1.01] hover:shadow-sp flex flex-col justify-center items-center"
     >
       <h2>{{ event?.name }}</h2>
       <span>
