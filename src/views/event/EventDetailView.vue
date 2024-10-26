@@ -35,7 +35,7 @@ defineProps({
 }
 
 .event-flag {
-  border: 2px solid; 
+  /* border: 2px solid;  */
   border-radius: 8px;
   padding: 10px;
   width: 250px;
